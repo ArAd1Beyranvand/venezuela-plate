@@ -1,0 +1,69 @@
+Resolving dependencies in `/home/aradbeyranvand/StudioProjects/plate`...
+Downloading packages...
+  material_color_utilities 0.13.0 (0.13.1 available)
+  test_api 0.7.12 (0.7.14 available)
+  xml 7.0.1 (7.1.0 available)
+Got dependencies in `/home/aradbeyranvand/StudioProjects/plate`!
+3 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+Publishing venezuela_plate 0.1.0 to https://pub.dev:
+├── CHANGELOG.md (<1 KB)
+├── LICENSE (1 KB)
+├── README.md (4 KB)
+├── all_publish_warnings.txt (<1 KB)
+├── analysis_options.yaml (<1 KB)
+├── example
+│   ├── analysis_options.yaml (<1 KB)
+│   ├── lib
+│   │   └── main.dart (<1 KB)
+│   └── pubspec.yaml (<1 KB)
+├── lib
+│   ├── src
+│   │   ├── venezuela_alphabets.dart (2 KB)
+│   │   ├── venezuela_colors.dart (1 KB)
+│   │   ├── venezuela_country.dart (<1 KB)
+│   │   ├── venezuela_plates.dart (5 KB)
+│   │   ├── venezuela_themes.dart (<1 KB)
+│   │   └── venezuela_validators.dart (3 KB)
+│   └── venezuela_plate.dart (<1 KB)
+├── pubspec.yaml (<1 KB)
+└── test
+    ├── golden_test.dart (2 KB)
+    ├── goldens
+    │   ├── ve_car_distrito_capital.png (47 KB)
+    │   └── ve_car_lara.png (42 KB)
+    └── venezuela_specs_test.dart (1 KB)
+
+Total compressed archive size: 96 KB.
+Validating package...
+Package validation found the following 2 potential issues:
+* `dart analyze` found the following issue(s):
+  Analyzing lib, pubspec.yaml...
+  
+    error - lib/src/venezuela_plates.dart:36:16 - Undefined class 'PlateFog'. Try changing the name to the name of an existing class, or creating a class with the name 'PlateFog'. - undefined_class
+    error - lib/src/venezuela_plates.dart:36:35 - Const variables must be initialized with a constant value. Try changing the initializer to be a constant expression. - const_initialized_with_non_constant_value
+    error - lib/src/venezuela_plates.dart:36:35 - The method 'P[...]xisting named parameter's name, or defining a named parameter with the name 'color'. - undefined_named_parameter
+     info - lib/src/venezuela_validators.dart:85:7 - Statements in an if should be enclosed in a block. Try wrapping the statement in a block. - curly_braces_in_flow_control_structures
+     info - lib/src/venezuela_validators.dart:90:7 - Statements in an if should be enclosed in a block. Try wrapping the statement in a block. - curly_braces_in_flow_control_structures
+  
+  19 issues found.
+  
+
+* 1 checked-in file is modified in git.
+  
+  Usually you want to publish from a clean git state.
+  
+  Consider committing these files or reverting the changes.
+  
+  Modified files:
+  
+  pubspec.yaml
+  
+  Run `git status` for more information.
+  
+The server may enforce additional checks.
+
+Package has 2 warnings.
+Failed to update packages.
+✓ venezuela_plate - OK
+
