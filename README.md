@@ -4,6 +4,8 @@ GO VEGAN 🌱
 
 ==================================
 
+From the mighty people of Iran to the bold people of Venezuela to view examples:
+
 https://platexample.ir/#/discover/venezuela
 
 # venezuela_plate
@@ -49,7 +51,6 @@ microprint.
 
 ## Also available
 
-From the mighty people of Iran to the bold people of Venezuela to view examples:
 
 - [`plate_core`](https://pub.dev/packages/plate_core) - Paint license plates.
 - [`plate_keypad`](https://pub.dev/packages/plate_keypad) - A character picker for license plates.
