@@ -12,26 +12,21 @@ class VenezuelaCategory {
 
   bool matches(String serial) {
     if (serial.length != pattern.length) return false;
-    for (var i = 0; i < pattern.length; i++) {
-      final p = pattern[i], c = serial[i];
-      final ok = switch (p) {
+    return pattern.split('').indexed.every((e) {
+      final c = serial[e.$1];
+      return switch (e.$2) {
         'L' => isLetter(c),
         'D' => isDigits(c),
-        _ => c == p,
+        final p => c == p,
       };
-      if (!ok) return false;
-    }
-    return true;
+    });
   }
 
   static bool isLetter(String c) =>
       c.length == 1 && c.codeUnitAt(0) >= 0x41 && c.codeUnitAt(0) <= 0x5A;
 }
 
-/// Judges a 2008 Venezuelan plate value. Reports, never throws, never bars a
-/// keystroke.
-///
-/// Quiet until the state letter is in. Then the six serial cells must match
+/// Reports, never throws, never bars a keystroke. Quiet until the state letter is in. Then the six serial cells must match
 /// one of [categories] and the last letter must name a state.
 class VenezuelaValidator extends GatedPlateValidator {
   const VenezuelaValidator();
@@ -67,10 +62,7 @@ class VenezuelaValidator extends GatedPlateValidator {
 
   /// The category [serial] is written in, or null if it fits none.
   static VenezuelaCategory? categoryOf(String serial) {
-    for (final c in categories) {
-      if (c.matches(serial)) return c;
-    }
-    return null;
+    return categories.where((c) => c.matches(serial)).firstOrNull;
   }
 
   static const String reasonSerialLength = 'The serial fills every cell.';

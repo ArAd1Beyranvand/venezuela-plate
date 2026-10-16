@@ -65,9 +65,7 @@ abstract final class _Layout {
   static const double stateGlyph = 31;
 }
 
-/// The 2008 plate: [car].
-///
-/// One design for every ordinary and special category. The categories differ
+/// One design for every category of the 2008 plate. The categories differ
 /// only in which of the first six cells are letters (see
 /// `VenezuelaValidator`), so the cells take either. The last letter is the
 /// state, and the state name printed under the serial is a mirror of it
@@ -119,10 +117,7 @@ abstract final class VenezuelaPlates {
           _Layout.slotHeight,
         ),
         length: 6,
-        spacing: math.max(
-          0,
-          _Layout.pitch - 0.6 * 0.72 * _Layout.slotHeight,
-        ),
+        spacing: math.max(0, _Layout.pitch - 0.6 * 0.72 * _Layout.slotHeight),
       ),
       PlateSlot(
         alphabet: VenezuelaAlphabets.state,
@@ -150,6 +145,5 @@ abstract final class VenezuelaPlates {
 
   static List<PlateSpec> get all => <PlateSpec>[car];
 
-  /// The theme every spec here is drawn in.
   static const PlateTheme theme = VenezuelaThemes.standard;
 }
