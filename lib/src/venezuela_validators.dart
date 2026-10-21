@@ -26,8 +26,9 @@ class VenezuelaCategory {
       c.length == 1 && c.codeUnitAt(0) >= 0x41 && c.codeUnitAt(0) <= 0x5A;
 }
 
-/// Reports, never throws, never bars a keystroke. Quiet until the state letter is in. Then the six serial cells must match
-/// one of [categories] and the last letter must name a state.
+/// Reports, never throws, never bars a keystroke. Quiet until the state
+/// letter is in; then the six serial cells must match one of [categories]
+/// and the last letter must name a state.
 class VenezuelaValidator extends GatedPlateValidator {
   const VenezuelaValidator();
 
@@ -61,9 +62,8 @@ class VenezuelaValidator extends GatedPlateValidator {
   ];
 
   /// The category [serial] is written in, or null if it fits none.
-  static VenezuelaCategory? categoryOf(String serial) {
-    return categories.where((c) => c.matches(serial)).firstOrNull;
-  }
+  static VenezuelaCategory? categoryOf(String serial) =>
+      categories.where((c) => c.matches(serial)).firstOrNull;
 
   static const String reasonSerialLength = 'The serial fills every cell.';
   static const String reasonNoCategory =

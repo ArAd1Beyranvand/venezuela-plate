@@ -1,7 +1,7 @@
 import 'dart:math' as math;
 
-import 'package:plate_core/plate_core.dart';
 import 'package:flutter/widgets.dart';
+import 'package:plate_core/plate_core.dart';
 
 import 'venezuela_alphabets.dart';
 import 'venezuela_colors.dart';
