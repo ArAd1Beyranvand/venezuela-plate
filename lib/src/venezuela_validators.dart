@@ -66,8 +66,7 @@ class VenezuelaValidator extends GatedPlateValidator {
       categories.where((c) => c.matches(serial)).firstOrNull;
 
   static const String reasonSerialLength = 'The serial fills every cell.';
-  static const String reasonNoCategory =
-      'The letters and digits are in no category\'s order.';
+  static const String reasonNoCategory = 'The letters and digits are in no category\'s order.';
   static const String reasonState = 'The last letter names no state.';
 
   @override
